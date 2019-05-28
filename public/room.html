@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title id="title">MyChat</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Enter a room name?</h3>
+        <input id="room" class="usernameInput" type="text"/><br><br>
+        <label style="color: white;">Disposable</label><br>
+        <input style="height: 50%; font-size: 100%" type="checkbox" id="check" value="" onclick="if(this.value) {this.value = ''} else {this.value = 'true'}"><br>
+        <button onclick="if(document.getElementById('check').value == 'true'){var d = 'd/'} else {var d = ''} window.location.href = '/' + d + document.getElementById('room').value; " class="submitButton">
+          Go
+        </button>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>
